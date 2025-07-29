@@ -1,4 +1,27 @@
 (function () {
+  const tailwindCdnUrl = "https://cdn.tailwindcss.com";
+
+  const loadTailwind = () => {
+    return new Promise((resolve, reject) => {
+      if (document.querySelector('script[src="' + tailwindCdnUrl + '"]')) {
+        return resolve(); // Already loaded
+      }
+      const script = document.createElement("script");
+      script.src = tailwindCdnUrl;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  };
+
+  loadTailwind().then(() => {
+    // ⬇️ All your chatbot DOM creation code goes here
+    const chatbotHtml = `...`;
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = chatbotHtml;
+    document.body.appendChild(wrapper);
+  });
+
   const container = document.createElement("div");
   container.id = "chatbot-widget-container";
   document.body.appendChild(container);
