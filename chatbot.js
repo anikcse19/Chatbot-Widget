@@ -19,7 +19,7 @@
   const style = document.createElement("link");
   style.rel = "stylesheet";
   style.href =
-    "https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/stylee.css";
+    "https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/stylee.css";
   shadowRoot.appendChild(style);
 
   const wrapper = document.createElement("div");
@@ -28,7 +28,7 @@
       <div id="welcomeDiv" class="hidden absolute right-5">
         <div class="bg-[#03a84e] flex flex-col justify-between shadow-lg overflow-hidden rounded-2xl w-[500px] h-[578px]">
           <div class="flex flex-col items-center space-y-3 pt-4 px-6">
-            <img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/bird.png" class="w-8 h-8" alt="">
+            <img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/bird.png" class="w-8 h-8" alt="">
             <h2 class="text-3xl text-center text-white font-semibold">Welcome to tawk.to</h2>
             <p class="text-lg text-white">Search our KB or start a chat. We're here to help 24x7.</p>
             <div id="chatBtn" class="bg-white cursor-pointer text-black h-20 rounded-xl flex px-4 justify-between items-center w-full">
@@ -36,7 +36,7 @@
                 <h2 class="text-lg font-bold">New Conversation</h2>
                 <p class="text-sm text-gray-500">We typically reply in a few minutes</p>
               </div>
-              <button><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/send.png" alt=""></button>
+              <button><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/send.png" alt=""></button>
             </div>
             <div class="bg-white text-black h-32 rounded-xl py-4 px-4 space-y-2 w-full">
               <h2 class="text-lg font-bold">Help Center</h2>
@@ -51,15 +51,15 @@
             </div>
           </div>
           <div class="bg-white h-12 flex justify-around px-10 py-3 rounded-b-xl">
-            <button id="welcomeBtn"><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/home.png" alt=""></button>
-            <button id="messageBtn"><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/message.png" alt=""></button>
+            <button id="welcomeBtn"><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/home.png" alt=""></button>
+            <button id="messageBtn"><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/message.png" alt=""></button>
           </div>
         </div>
       </div>
       <div id="messageDiv" class="hidden absolute right-5">
         <div class="w-[500px] h-[578px] flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden">
           <div class="bg-green-600 text-white flex items-center gap-8 px-4 py-3">
-            <button id="backBtn"><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/left-arrow.png" class="w-3 h-3" alt=""></button>
+            <button id="backBtn"><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/left-arrow.png" class="w-3 h-3" alt=""></button>
             <h2 class="text-xl font-semibold text-white">Messages</h2>
           </div>
           <div class="flex-1 p-4 space-y-4">
@@ -69,38 +69,38 @@
                 <h2 class="text-lg font-bold">New Conversation</h2>
                 <p class="text-sm text-gray-500">We typically reply in a few minutes</p>
               </div>
-              <button><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/send.png" alt=""></button>
+              <button><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/send.png" alt=""></button>
             </div>
             <h2 class="text-xl text-black font-semibold">Recent</h2>
             <div><p class="text-base text-gray-500 text-center">No recent conversations</p></div>
           </div>
           <div class="bg-white h-12 relative shadow-2xl flex justify-around px-10 py-3 rounded-b-xl">
-            <button id="welcomeBtn2"><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/home.png" alt=""></button>
-            <button id="messageBtn2"><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/message.png" alt=""></button>
+            <button id="welcomeBtn2"><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/home.png" alt=""></button>
+            <button id="messageBtn2"><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/message.png" alt=""></button>
           </div>
         </div>
       </div>
       <div id="chatDiv" class="hidden absolute right-5">
         <div class="w-[500px] h-[578px] flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden">
           <div class="bg-green-600 text-white flex justify-between items-center px-4 py-3">
-            <button id="chatBackBtn"><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/left-arrow.png" class="w-3 h-3" alt=""></button>
+            <button id="chatBackBtn"><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/left-arrow.png" class="w-3 h-3" alt=""></button>
             <button class="text-xl">&#9776;</button>
           </div>
           <div id="messages" class="overflow-y-auto border border-gray-200 p-4 space-y-2"></div>
           <div class="flex items-center px-4 py-2">
             <input id="messageInput" type="text" placeholder="Type a message..." class="flex-1 px-3 py-2 rounded-lg focus:outline-none" />
             <div class="flex space-x-3 ml-2 text-gray-500 text-lg">
-              <button><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/like.png" class="w-4 h-4" alt=""></button>
-              <button><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/link.png" class="w-4 h-4" alt=""></button>
-              <button><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/happy.png" class="w-4 h-4" alt=""></button>
-              <button id="sendBtn"><img src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/send.png" class="w-4 h-4" alt=""></button>
+              <button><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/like.png" class="w-4 h-4" alt=""></button>
+              <button><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/link.png" class="w-4 h-4" alt=""></button>
+              <button><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/happy.png" class="w-4 h-4" alt=""></button>
+              <button id="sendBtn"><img src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/send.png" class="w-4 h-4" alt=""></button>
             </div>
           </div>
         </div>
       </div>
       <div class="fixed bottom-0 right-0 m-2">
         <button id="openChatBtn" class="bg-green-600 p-4 rounded-full transition duration-300">
-          <img id="chatIcon" src="https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/assets/speech.png" alt="Open chat" class="w-6 h-6" />
+          <img id="chatIcon" src="https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/assets/speech.png" alt="Open chat" class="w-6 h-6" />
         </button>
       </div>
     </div>
@@ -111,7 +111,7 @@
   const scripts = ["script.js", "api.js", "chat.js"];
   scripts.forEach((src) => {
     const s = document.createElement("script");
-    s.src = `https://cdn.jsdelivr.net/gh/your-username/chatbot-widget/${src}`;
+    s.src = `https://cdn.jsdelivr.net/gh/anikcse19/chatbot-widget/${src}`;
     shadowRoot.appendChild(s);
   });
 })();
